@@ -19,7 +19,8 @@
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x",
     "eslint": "7.1.0",
-    "eslint-config-htmlacademy": "0.6.0"
+    "eslint-config-htmlacademy": "0.6.0",
+    "gulp-pug": "^4.0.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -40,6 +41,8 @@
     "*.json",
     "*.js",
     "source/*.html",
+    "source/*.pug",
+    "source/includes/**/*.pug",
     "source/js/**/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.{sass,scss}"
@@ -48,7 +51,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1",
-    "gulp-pug": "^4.0.1"
+    "del": "^4.1.1"
   }
 }

@@ -24,6 +24,7 @@ gulp.task(`css`, function () {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest(`build/css`))
     .pipe(csso())
     .pipe(rename(`style.min.css`))
     .pipe(sourcemap.write(`.`))
@@ -42,7 +43,7 @@ gulp.task(`server`, function () {
 
   gulp.watch(`source/sass/**/*.{scss,sass}`, gulp.series(`css`));
   gulp.watch(`source/img/icon-*.svg`, gulp.series(`sprite`, `html`, `refresh`));
-  gulp.watch(`source/*.html`, gulp.series(`html`, `refresh`));
+  gulp.watch([`source/*.pug`, `source/includes/**/*.pug`], gulp.series(`html`, `refresh`));
   gulp.watch(`source/js/**/*.js`, gulp.series(`javascript`, `refresh`));
 });
 
@@ -73,7 +74,7 @@ gulp.task(`webp`, function () {
 
 gulp.task(`sprite`, function () {
   return gulp
-    .src(`source/img/{icon-*,htmlacademy*}.svg`)
+    .src(`source/img/{icon-*,logo*}.svg`)
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename(`sprite_auto.svg`))
     .pipe(gulp.dest(`build/img`));
