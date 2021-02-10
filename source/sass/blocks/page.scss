@@ -1,0 +1,7 @@
+.page__body {
+  &--fullscreen {
+    @media (max-width: $tablet-width-only) {
+      overflow-y: hidden;
+    }
+  }
+}

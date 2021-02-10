@@ -1,15 +1,18 @@
 header.main-header
   .container.main-header__container
-    nav.main-header__navigation
+    nav.main-header__navigation.main-header__navigation--closed.main-header__navigation--nojs
       a(class="main-header__logo", aria-label="Сайт Test")
         svg(role="img", width="147", height="32", viewBox="0 0 147 32")
           use(xlink:href="img/sprite_auto.svg#logo")
-      ul.main-header__site-navigation
-        li
-          a(href="#") Клиентам
-      ul.main-header__user-navigation
-        li.main-header__user-item.main-header__user-item--profile
-          a(href="#") Войти
+      .main-header__navigation-inner
+        ul.main-header__site-navigation
+          li
+            a(href="#") Клиентам
+        ul.main-header__user-navigation
+          li.main-header__user-item.main-header__user-item--profile
+            a(href="#") Войти
+      button(type="button")
+        span.visually-hidden Открыть меню
     .main-header__info-wrapper
       p.main-header__info-title Подбор авто в лизинг по выгодной цене
       p IT платформа по быстрому поиску автомобиля от официальных дилеров РФ

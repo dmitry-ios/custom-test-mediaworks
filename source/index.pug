@@ -1,9 +1,10 @@
 doctype html
-html(lang="ru")
+html(lang="ru").page
   head
     include includes/head.pug
     title Подбор авто в лизинг
-  body
+  body.page__body
+    // Ставить модификатор fullscreen элементу page__body, если меню открыто
     include includes/main-header.pug
     include includes/main-content.pug
     script(src="js/script.js")

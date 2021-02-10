@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   min-height: 100%;
+  min-width: $mobile-width;
 
   font-family: $main-fontstack;
   font-style: normal;
