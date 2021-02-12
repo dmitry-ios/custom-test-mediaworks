@@ -1,4 +1,6 @@
 .page__body {
+  padding-bottom: 185px;
+
   &--fullscreen {
     @media (max-width: $tablet-width-only) {
       overflow-y: hidden;
