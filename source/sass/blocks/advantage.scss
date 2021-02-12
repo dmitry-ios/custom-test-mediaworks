@@ -1,0 +1,23 @@
+.advantage {
+  padding-top: 130px;
+}
+
+.advantage p {
+  margin: 0;
+  padding: 0 15px;
+
+  font-family: $secondary-fontstack;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  color: $text-high-dark-color;
+
+  @media (max-width: $tablet-width-only) {
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 28px;
+    line-height: 1.5em;
+  }
+}
