@@ -15,6 +15,7 @@ const webp = require(`gulp-webp`);
 const svgstore = require(`gulp-svgstore`);
 const del = require(`del`);
 const pug = require(`gulp-pug`);
+const concat = require(`gulp-concat`);
 /* eslint-enable no-undef */
 
 gulp.task(`css`, function () {
@@ -90,6 +91,7 @@ gulp.task(`html`, function () {
 gulp.task(`javascript`, function () {
   return gulp
     .src([`source/js/**/*.js`], {base: `source`})
+    .pipe(concat(`js/bundle.js`))
     .pipe(gulp.dest(`build`));
 });
 

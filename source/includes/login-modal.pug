@@ -1,15 +1,15 @@
-section.login
+section.login.login--closed
   .login__inner
     h2 Авторизация
     form(action="https://echo.htmlacademy.ru/", method="post")
       .login__field
         label(for="email-field") E-mail
-        input(type="email", name="email", id="email-field", placeholder="Введите e-mail")
+        input(type="email", name="email", id="email-field", placeholder="Введите e-mail", required)
       .login__field
         label(for="pass-field") Пароль
-        input(type="password", name="password", id="pass-field", placeholder="Введите пароль", autocomplete="off")
+        input(type="password", name="password", id="pass-field", placeholder="Введите пароль", autocomplete="off", required)
       input(type="submit", value="Войти")
-    button(type="button")
+    button(type="button", id="close-button")
       svg(role="img", width="14", height="14", viewBox="0 0 14 14")
           use(xlink:href="img/sprite_auto.svg#icon-close")
       span.visually-hidden Закрыть форму
