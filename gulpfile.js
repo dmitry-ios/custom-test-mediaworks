@@ -84,7 +84,7 @@ gulp.task(`sprite`, function () {
 gulp.task(`html`, function () {
   return gulp
     .src(`source/*.pug`)
-    .pipe(pug({pretty: true}))
+    .pipe(pug())
     .pipe(gulp.dest(`build`));
 });
 
