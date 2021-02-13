@@ -88,10 +88,9 @@
   list-style: none;
 
   @media (max-width: $tablet-width-only) {
+    margin-bottom: 30px;
     padding-left: 4px;
     display: block;
-
-    margin-bottom: 30px;
 
     &:last-child {
       margin-bottom: 0;
@@ -142,6 +141,7 @@
 
   background-color: $basic-white-color;
   border: none;
+  cursor: pointer;
 
   &:focus,
   &:hover {

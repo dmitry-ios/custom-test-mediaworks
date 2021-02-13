@@ -29,7 +29,7 @@
   width: 490px;
 
   background-color: $basic-white-color;
-  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 60px $special-black-shadow-color;
   border-radius: 6px;
 
   @media (max-width: $mobile-width-only) {
@@ -104,6 +104,7 @@
   background: $basic-orange-color;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 
   &:focus,
   &:hover {
@@ -126,6 +127,7 @@
 
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &:focus,
   &:hover {
